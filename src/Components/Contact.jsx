@@ -1,0 +1,14 @@
+import React from "react";
+
+export const Contact = () => {
+  return (
+    <div className="contact-page-container" id="contact">
+      <h1 className="primary-heading">Have Any Questions?</h1>
+      <h1 className="primary-heading">Let Us Help You</h1>
+      <div className="contact-form-container">
+        <input type="text" placeholder="Enter your email here" />
+        <button className="secondary-button">Submit</button>
+      </div>
+    </div>
+  );
+};

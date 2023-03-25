@@ -1,38 +1,360 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Reem Kufi", sans-serif;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  width: 85vw;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.navbar-links-container a {
+  margin-right: 48px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar-cart-icon {
+  font-size: 18px;
+}
+
+.primary-button {
+  padding: 16px 24px;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-button:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+.navbar-menu-container {
+  display: none;
+}
+
+.navbar-menu-container svg {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home-banner-container {
+  position: relative;
+  display: flex;
+  padding-top: 48px;
+}
+
+.home-bannerImage-container {
+  position: absolute;
+  top: -100px;
+  right: -170px;
+  z-index: -2;
+  max-width: 800px;
+}
+
+.home-image-section {
+  max-width: 600px;
+  flex: 1;
+}
+
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.primary-heading {
+  font-size: clamp(32px, 5vw, 64px);
+  color: #4c4c4c;
+  max-width: 600px;
+}
+
+.primary-text {
+  font-size: clamp(16px, 3vw, 24px);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 24px 0;
+}
+
+.secondary-button {
+  padding: 16px 32px;
+  background-color: #fe9e0d;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-button svg {
+  margin-left: 12px;
+  font-size: 32px;
+}
+
+.secondary-button:hover {
+  background-color: #e48f0f;
+}
+
+.about-section-container {
+  margin-top: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-background-image-container {
+  position: absolute;
+  left: -125px;
+  z-index: -2;
+}
+
+.about-section-image-container {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.about-section-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.primary-subheading {
+  font-weight: 700;
+  color: #fe9e0d;
+  font-size: 32px;
+}
+
+.about-buttons-container {
+  display: flex;
+  margin-top: 16px;
+}
+
+.watch-video-button {
+  margin-left: 24px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #484848;
+  transition: 0.2s;
+}
+
+.watch-video-button svg {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.work-section-container {
+  margin-top: 240px;
+}
+
+.work-section-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-section-top p {
+  text-align: center;
+  max-width: 600px;
+}
+
+.work-section-top h1 {
+  max-width: 700px;
+}
+
+.work-section-bottom {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.work-section-info {
+  width: 300px;
+  min-height: 360px;
+  background-color: white;
+  padding: 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  color: #505050;
+  border-radius: 32px;
+  margin: 16px 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.work-section-info h2 {
+  margin: 16px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.work-section-info p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.testimonial-section-container {
+  margin-top: 240px;
+}
+
+.testimonial-section-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-section-bottom {
+  margin: 32px auto;
+  background-color: white;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  border-radius: 48px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.testimonial-section-bottom p {
+  margin-top: 32px;
+  color: #515151;
+  font-size: 16px;
+  max-width: 500px;
+  font-weight: 600;
+}
+
+.testimonial-section-bottom h2 {
+  margin-top: 8px;
+}
+
+.testimonial-stars-container svg {
+  margin: 24px 4px;
+  font-size: 24px;
+  color: #fe9e0d;
+}
+
+.contact-page-container {
+  margin-top: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-page-container h1 {
+  max-width: 900px;
+}
+
+.contact-form-container {
+  margin-top: 48px;
+  padding: 16px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 48px;
+}
+
+.contact-form-container input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 16px 32px;
+}
+
+.footer-section-container {
+  margin: 240px 0;
+  display: flex;
+}
+
+.footer-logo-container {
+  max-width: 120px;
+}
+
+.footer-icons {
+  margin-top: 32px;
+}
+
+.footer-icons svg {
+  font-size: 24px;
+  margin-right: 16px;
+  color: #585858;
+}
+
+.footer-section-two {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-section-columns {
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+}
+
+.footer-section-columns span {
+  margin: 4px 0;
+  font-weight: 500;
+  color: #4c4c4c;
+  cursor: pointer;
 }
